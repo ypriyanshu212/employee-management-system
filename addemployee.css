@@ -1,0 +1,197 @@
+.add_employee_container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    background: #f3f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.add-card {
+    width: 100%;
+    max-width: 950px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.add-txt-back {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.back-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #eef2ff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.back-logo:hover {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.add-emp-txt h2 {
+    font-size: 28px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.add-emp-txt p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+#employeeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.name,
+.email-phone,
+.department-position,
+.salary-start {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.first-name,
+.last-name,
+.email,
+.phone,
+.department,
+.position,
+.salary,
+.start,
+.status {
+    display: flex;
+    flex-direction: column;
+}
+
+#employeeForm h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+#employeeForm input,
+#employeeForm select {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 0 16px;
+    font-size: 15px;
+    background: #f9fafb;
+    color: #111827;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#employeeForm input:focus,
+#employeeForm select:focus {
+    border-color: #4f46e5;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+.status-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.status-status .status {
+    flex: 1;
+}
+
+.btm {
+    display: flex;
+    gap: 14px;
+}
+
+.add-btn button,
+.cancel-btn button {
+    min-width: 150px;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.add-btn button {
+    background:black;
+    color: #fff;
+}
+
+.add-btn button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.cancel-btn button {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.cancel-btn button:hover {
+    background: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+    .add_employee_container {
+        padding: 18px;
+    }
+
+    .add-card {
+        padding: 22px;
+    }
+
+    .name,
+    .email-phone,
+    .department-position,
+    .salary-start {
+        grid-template-columns: 1fr;
+    }
+
+    .status-status {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btm {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .add-btn button,
+    .cancel-btn button {
+        width: 100%;
+    }
+
+    .add-emp-txt h2 {
+        font-size: 24px;
+    }
+}

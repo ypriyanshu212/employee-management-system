@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.main{
+    height: 100vh;
+    width:100%;
+}
+/* navBar  */
+.nav-bar{
+    height: 10%;
+    width:100%;
+    border-bottom:1px solid rgba(0, 0, 0, 0.342);
+    display: flex;
+    align-items: center;
+}
+.nav-logo i{
+    font-size: 2rem;
+    margin: 0 2.5rem;
+    cursor: pointer;
+    color: black;
+}
+.nav-txt h3,
+.nav-txt a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+/* hero section  */
+.hero-section{
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+/* side menu  */
+.side-menu{
+    height: 100%;
+    width: 20%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+/* .menu-items{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    width: 100%;
+    height: 15%;
+    font-size: 1.5rem;
+    background-color: blue;
+}
+.menu-items,
+.menu-items h3,
+.menu-items i{
+    color: white;
+    margin: 0;
+    background-color: blue;
+} */
+
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    color: black;
+    width: 100%;
+}
+
+.menu-logo i {
+    font-size: 1.5rem;
+}
+
+.menu-txt h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+  .menu-items:hover{
+    border-radius: 10px;
+  }
+.menu-items:hover,
+.menu-items:hover h3,
+.menu-items:hover i {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+/* right-content  */
+.right-content{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 2% 5%;
+}
+.add-leave{
+    height: 70%;
+    width: 70%;
+    border: 1px solid gray;
+    border-radius: 10px; 
+    padding: 2rem 3rem;    
+}
+.add-leave-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-leave-heading p{
+    color: gray;
+    font-size: 1.3rem;
+}
+.new-request-btn i{
+    padding: 0 5px;
+    font-size: 1.2rem;
+}
+.new-request-btn button{
+    height: 2rem;
+    width: 10.2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.container-request{
+    margin: 20px 0;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.185);
+    border-radius: 10px ;
+}
+.tcontainer{
+    border: 1px solid  ;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 5px;
+    border: 2px solid;
+}
+.tcontainer thead{
+    height: 10%;
+    background-color:black;
+    color: white;
+    
+}
+thead{
+    border-bottom: 2px solid blue;   
+}
+.tcontainer thead > tr{
+    /* text-align: center; */
+    border-radius: 10px;
+    /* border:2px solid green; */
+    border-bottom:1px solid green;
+}
+.tcontainer thead > tr > td {
+    text-align: center;
+}
+
+/* practice */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);  /* dark overlay  */
+
+    backdrop-filter: blur(8px); /* blur effect  */
+    -webkit-backdrop-filter: blur(8px); /* for mobile  */
+}
+.modal-box{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 60%;
+    width: 30%;
+}
+.sub-leave-request{
+    height: 100%;
+    width: 100%;
+}
+.sub-leave-header p{
+    color: gray;
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+}
+
+.request-form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.request-form label{
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+.request-form select{
+    margin-bottom: 0.9rem;
+    height: 25px;
+}
+.start-end-date{
+    display: flex;
+}
+.start-end-date {
+    display: flex;
+}
+.request-form input{
+    height: 60%;
+}
+.Reason{
+    border: none;
+    border-radius: 5px;
+    height: 100px;
+    background-color: red;
+}
+.request-form button{
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.leave-reason{
+    height: 4rem;
+}
+#leave-details{
+    text-align: center;
+}

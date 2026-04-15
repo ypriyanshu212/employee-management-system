@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.payroll_container{
+    width: 90%;
+}
+ .payroll-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.total,
+.employees,
+.pending {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 2.5rem;
+}
+
+.total-heading,
+.employees-heading,
+.pending-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-heading h2,
+.employees-heading h2,
+.pending-heading h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.total-heading i,
+.employees-heading i,
+.pending-heading i {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 3rem;
+}
+
+.total-value
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.total-value i,
+.total-value h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+.employees-value h2{
+    font-size: 2rem;
+}
+.employees-value h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem
+}
+.payroll-active h3{
+    color: gray;
+}
+.day h3{
+    text-align: center;
+    color:gray;
+}

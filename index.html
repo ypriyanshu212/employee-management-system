@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="employee.css">
+    <link rel="stylesheet" href="addemployee.css">
+    <link rel="stylesheet" href="attenction.css">
+    <link rel="stylesheet" href="leave.css">
+    <link rel="stylesheet" href="P_style.css">
+</head>
+
+<body>
+    <!-- whole page container   -->
+    <div class="main">
+        <!-- nav container   -->
+        <div class="nav-container">
+            <h2><i class="fa fa-users" aria-hidden="true"></i>Employee management system</h2>
+        </div>
+        <!-- container for side menu and content -->
+        <div class="container">
+            <!-- side menu container   -->
+            <div class="menu-container">
+                <!-- list of menu  -->
+                <ul>
+                    <li onclick="employee_box()" id="employee_menu"><i class="fa fa-user"
+                            aria-hidden="true"></i>Employee</li>
+                    <li onclick="Addemployee_box()" id="add_employee_menu"><i class="fa fa-user-plus"
+                            aria-hidden="true"></i>Add Employee</li>
+                    <li onclick="attencance_box()" id="attencance_menu"><i class="fa-regular  fa-clock"
+                            aria-hidden="true"></i>Attendance</li>
+                    <li onclick="leave_box()" id="leave_menu"><i class="fa fa-calendar" aria-hidden="true"></i>Leave
+                        Management</li>
+                    <li onclick="payroll_box()" id="payroll_menu"><i class="fa fa-inr" aria-hidden="true"></i>Payroll
+                    </li>
+                </ul>
+                <!-- chat gpt -->
+                <!-- <ul>
+                    <li onclick="showSection('emp', this)">
+                        <i class="fa fa-user"></i> Employee
+                    </li>
+
+                    <li onclick="showSection('add_emp', this)">
+                        <i class="fa fa-user-plus"></i> Add Employee
+                    </li>
+
+                    <li onclick="showSection('atten', this)">
+                        <i class="fa-regular fa-clock"></i> Attendance
+                    </li>
+
+                    <li onclick="showSection('leave', this)">
+                        <i class="fa fa-calendar"></i> Leave Management
+                    </li>
+
+                    <li onclick="showSection('pay', this)">
+                        <i class="fa fa-inr"></i> Payroll
+                    </li>
+                </ul> -->
+            </div>
+            <div class="content">
+                <div class="employee-container" id="emp">
+                    <div class="employee-container-txt">
+                        <h3>Employee Directory</h3>
+                        <p>Manage and view all employees in the organization</p>
+                    </div>
+                    <input type="text" placeholder="Search employees......">
+                    <!-- employee table -->
+                    <div class="employee-data">
+                        <table>
+                            <thead id="t-head">
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Email</td>
+                                    <td>Position</td>
+                                    <td>Department</td>
+                                    <td>status</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody id="table_data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- <div class="show_no_employee">
+                        <p>Showing 5 of 5 employees</p>
+                    </div> -->
+                </div>
+                <!-- add emplyees section  -->
+                <!-- <div class="add_employee_container" id="add_emp">
+                    <div class="add-employee-form-container">
+                        <div class="add-employee-form-container-txt">
+                            <div class="back-btn">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="add_text">
+                                <h3>Add New Employee</h3>
+                                <p>Fill in the details to add a new employee</p>
+                            </div>
+                        </div>
+                        <div class="add-form">
+
+                            <div class="first-last-name">
+                                <div class="first-name">
+                                    <label for="">
+                                        <h3>First Name*</h3>
+                                    </label>
+                                    <input type="text" placeholder="Joe">
+                                </div>
+                                <div class="last-name">
+                                    <label for="">
+                                        <h3>Last Name*</h3>
+                                    </label>
+                                    <input type="text" placeholder="Joe">
+                                </div>
+                            </div> -->
+                <!-- test -->
+                <div class="add_employee_container" id="add_emp">
+                    <!-- <div class="right-content"> -->
+                    <div class="add-card">
+                        <div class="add-txt-back">
+                            <div class="back-logo">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="add-emp-txt">
+                                <h2>Add New Employee</h2>
+                                <p>Fill in the details to add a new employee</p>
+                            </div>
+                        </div>
+                        <form action="" id="employeeForm">
+                            <!-- name  -->
+                            <div class="name">
+                                <div class="first-name">
+                                    <label for="">
+                                        <h3>Full Name*</h3>
+                                    </label>
+                                    <input type="text" placeholder="John" id="fname">
+                                </div>
+                                <div class="last-name">
+                                    <label for="">
+                                        <h3>Last Name*</h3>
+                                    </label>
+                                    <input type="text" placeholder="Doe" id="lname">
+                                </div>
+                            </div>
+                            <!-- email and phone  -->
+                            <div class="email-phone">
+                                <div class="email">
+                                    <label for="">
+                                        <h3>email*</h3>
+                                    </label>
+                                    <input type="text" placeholder="John.deo@company.com" id="email">
+                                </div>
+                                <div class="phone">
+                                    <label for="">
+                                        <h3>Phone*</h3>
+                                    </label>
+                                    <input type="tel" placeholder="+91(987)654-321" id="phone" maxlength="10"
+                                        minlength="10" pattern="[0-9]{10}"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                </div>
+                            </div>
+                            <!-- Department and position  -->
+                            <div class="department-position">
+                                <div class="department">
+                                    <label for="">
+                                        <h3>Department*</h3>
+                                    </label>
+                                    <!-- <input type="text" placeholder="Engineering" id="department"> -->
+                                    <select id="department">
+                                        <option value="">Select Department</option>
+                                        <option value="hr">HR</option>
+                                        <option value="it">IT</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="sales">Sales</option>
+                                    </select>
+                                </div>
+                                <div class="position">
+                                    <label for="">
+                                        <h3>position*</h3>
+                                    </label>
+                                    <!-- <input type="text" placeholder="Software Engineer" id="position"> -->
+                                    <select id="position">
+                                        <option value="">Select Position</option>
+                                        <option value="intern">Intern</option>
+                                        <option value="junior">Junior Developer</option>
+                                        <option value="senior">Senior Developer</option>
+                                        <option value="manager">Manager</option>
+                                        <option value="Team">Team Leader</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Salary and StartDate  -->
+                            <div class="salary-start">
+                                <div class="salary">
+                                    <label for="">
+                                        <h3>Salary*</h3>
+                                    </label>
+                                    <input type="text" placeholder="75000" id="salary">
+                                </div>
+                                <div class="start">
+                                    <label for="">
+                                        <h3>Start-Date*</h3>
+                                    </label>
+                                    <input type="date" id="start">
+                                </div>
+                            </div>
+                            <!-- status  -->
+                            <div class="status-status">
+                                <div class="status">
+                                    <label for="">
+                                        <h3>Status*</h3>
+                                    </label>
+                                    <select name="" id="status">
+                                        <option value="">select status</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Inactive">Inactive</option>
+                                        <option value="Leave">On Leave</option>
+                                    </select>
+                                </div>
+                                <!-- btn section  -->
+                                <div class="btm">
+                                    <div class="add-btn"><button type="submit">Add Employee</button></div>
+                                    <div class="cancel-btn"><button type="button">Cancel</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <!-- test -->
+                <!-- attendance section  -->
+                <div class="attendance_container" id="atten">
+                    <div class="right-content">
+                        <div class="check-in-out">
+                            <h3>Quick Attendence</h3>
+                            <p>Check in and check out quickly</p>
+                            <div class="check-in-out-btn">
+                                <select name="" id="employee-select">
+                                    <option value="">select employee</option>
+                                </select>
+                                <button id="check-in-btn" onclick="check_in()"><i class="fa fa-sign-in"
+                                        aria-hidden="true"></i>Check
+                                    In</button>
+                                <button id="check-out-btn" onclick="check_out()"><i class="fa fa-sign-out"
+                                        aria-hidden="true"></i>Check Out</button>
+                            </div>
+                        </div>
+                        <div class="today-attendance-container">
+                            <div class="today-attendance-heading">
+                                <div class="today-attendance">
+                                    <h3>Today's Attendence</h3>
+                                    <p><i class="fa fa-calendar" aria-hidden="true"><span id="today"></span></i></p>
+                                </div>
+                                <div class="present-today">
+                                    <h2>0</h2>
+                                    <p>Present Today</p>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Search attendance...">
+                            <div class="attendence-table">
+                                <table class="attendencet-border">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee</th>
+                                            <th>Department</th>
+                                            <th>Check-in</th>
+                                            <th>Hours</th>
+                                            <th>Check-out</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Attendance data will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- leave section  -->
+                <div class="leave_container" id="leave">
+                    <div class="right-content">
+                        <div class="add-leave">
+                            <div class="add-leave-heading">
+                                <div class="add-leave-txt">
+                                    <h1>Leave Requests</h1>
+                                    <p>Manage employee leave requests</p>
+                                </div>
+                                <div class="new-request-btn">
+                                    <button onclick="openmodal()"><i class="fa fa-plus" aria-hidden="true"></i>New
+                                        Request</button>
+                                     <!-- <div class="practice"> -->
+                                    <div id="modal" class="modal">
+                                        <div class="modal-box">
+                                            <span onclick="closemodal()"><i class="fa fa-times"
+                                                    aria-hidden="true"></i></span>
+                                            <div class="sub-leave-request">
+                                                <div class="sub-leave-header">
+                                                    <h3>Submit Leave Request</h3>
+                                                    <p>Fill in the details for the leave request</p>
+                                                    <form action="" class="request-form" id="leave-form">
+                                                        <label for="employee">Employee</label>
+                                                        <select value="" id="employee">
+                                                            <option name="" id="">Select Employee</option>
+                                                            <option name="" id="">HR</option>
+                                                        </select>
+                                                        <label for="leave-type">Leave Type</label>
+                                                        <select value="" id="leave-type">
+                                                            <option name="" id="">Vacation</option>
+                                                        </select>
+                                                        <div class="start-end-date">
+                                                            <div class="start-date">
+                                                                <label for="start-day">Start Date</label>
+                                                                <input type="date" id="start-day">
+                                                            </div>
+                                                            <div class="end-date">
+                                                                <label for="end-day">End Date</label>
+                                                                <input type="date" id="end-day">
+                                                            </div>
+                                                        </div>
+                                                        <label for="reason">Reason</label>
+                                                        <!-- <input type="text" class="leave-reason"> -->
+                                                        <textarea name="reason" id="reason"
+                                                            class="leave-reason"></textarea>
+                                                        <button type="submit">Submit Request</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <div class="container-request">
+                                <table class="tcontainer">
+                                    <thead>
+                                        <tr>
+                                            <td>Employee</td>
+                                            <td>Type</td>
+                                            <td>start Date</td>
+                                            <td>End Date</td>
+                                            <td>Days</td>
+                                            <td>Status</td>
+                                            <td>Action</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="leave-details">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- payroll section  -->
+                <div class="payroll_container" id="pay">
+                    <div class="right-content">
+                        <div class="payroll-cards">
+                            <div class="total">
+                                <div class="total-heading">
+                                    <h2>Total <br> Payroll</h2>
+                                    <i class="fa fa-usd fa*5x" aria-hidden="true"></i>
+                                </div>
+                                <div class="total-value">
+                                    <i class="fa fa-usd fa*5x" aria-hidden="true"></i>
+                                    <h3 id="total"></h3>
+                                </div><br>
+                                <div class="day">
+                                    <h3>april 2026</h3>
+                                </div>
+                            </div>
+                            <div class="employees">
+                                <div class="employees-heading">
+                                    <h2>Employee</h2>
+                                    <i class="fa fa-users fa*5x" aria-hidden="true"></i>
+                                </div>
+                                <div class="employees-value">
+                                    <div class="payroll-active">
+                                        <h2>2</h2>
+                                        <h3>Active payroll <br>record </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pending">
+                                <div class="pending-heading">
+                                    <h2>Employee</h2>
+                                    <i class="fa fa-users fa*5x" aria-hidden="true"></i>
+                                </div>
+                                <div class="pending-value">
+                                    <div class="payroll-active">
+                                        <h2>2</h2>
+                                        <h3>Awaiting <br>processin </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="./home.js"></script>
+    <script src="./attenction.js"></script>
+    <script src="./leave.js"></script>
+    <script src="./payroll.js"></script>
+</body>
+
+</html>

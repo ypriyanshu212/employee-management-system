@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+/* whole page container  */
+.main{
+    /* background-color: red; */
+    width: 100%;
+    height: 100vh;
+}
+/* nav container  */
+.nav-container{
+    height: 10%;
+    width: 100%;
+    /* background-color: black; */
+    color: black;
+    padding:0 5rem;
+    display: flex;
+    align-items: center;
+}
+.container{
+    display: flex;
+    height: 90%;
+}
+/* side menu container  */
+.menu-container{
+    width: 20%;
+    height: 60%;
+    /* background-color: black; */
+    color: black;
+    /* border: 1px solid black; */
+    font-size: 1.5rem;
+}
+.menu-container  ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.menu-container  ul > li{
+    padding: 10% 2rem;
+    /* background-color:black; */
+    height: 100%;
+    cursor: pointer;
+}
+.menu-container  ul > li > i{
+    margin-right: 1rem;
+}
+/* content section  */
+.content{
+    /* background-color:black; */
+    height:90%;
+    width: 80% ;
+    /* border-left: 2px solid black; */
+}
+.employee-data {
+    width: 100%;
+    height: 100%;
+}
+#add_employee_menu,
+#attencance_menu,
+#leave_menu,
+#payroll_menu{
+    border-radius: 10px;
+}
+
+
+
+
+/* chatgpt  */
+/* .menu-container ul li {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-container ul li.active {
+    background-color: black;
+    color: white;
+} */
+/* chatgpt */
+#table_data tr {
+    transition: all 0.2s ease;
+    background: #ffffff;
+}
+
+#table_data tr:hover {
+    background: #f8fafc;
+}
+
+#table_data td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #1f2937;
+    vertical-align: middle;
+}
+
+#table_data td:first-child {
+    font-weight: 600;
+    color: #111827;
+}
+
+#table_data .status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#table_data .status.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+#table_data .status.inactive {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+#table_data .status.leave {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+#table_data .action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#table_data .edit-btn,
+#table_data .delete-btn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+#table_data .edit-btn {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+#table_data .edit-btn:hover {
+    background: #4f46e5;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#table_data .delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+#table_data .delete-btn:hover {
+    background: #dc2626;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#table_data .edit-input,
+#table_data .edit-select {
+    width: 100%;
+    min-width: 110px;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+}
+
+#table_data .edit-input:focus,
+#table_data .edit-select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+#table_data .save-btn {
+    background: #4f46e5;
+    color: #fff;
+}
+
+#table_data .save-btn:hover {
+    background: #4338ca;
+}
+
+#table_data .cancel-btn {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+#table_data .cancel-btn:hover {
+    background: #e5e7eb;
+}

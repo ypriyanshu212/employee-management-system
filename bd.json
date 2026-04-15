@@ -1,0 +1,70 @@
+{
+  "employees": [
+    {
+      "name": "priyansh yadav",
+      "salary": 60000,
+      "email": "ypriyanshu2122@gmail.com",
+      "phone": 9343205592,
+      "department": "it",
+      "position": "intern",
+      "start": "2026-02-10",
+      "status": "Active",
+      "id": "tmvc9Ug-sJI"
+    },
+    {
+      "name": "nemesh sahu",
+      "salary": 60000,
+      "email": "nemesh@gmail",
+      "phone": 987654321,
+      "department": "it",
+      "position": "intern",
+      "start": "2026-02-10",
+      "status": "Active",
+      "id": "YROEyL5gtaQ"
+    }
+  ],
+  "leaves": [
+    {
+      "employee": "nemesh sahu",
+      "leaveType": "Sick Leave",
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-16",
+      "days": 4,
+      "reason": "i am not feeling well",
+      "status": "Rejected",
+      "id": 1
+    },
+    {
+      "employee": "priyansh yadav",
+      "leaveType": "Sick Leave",
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-16",
+      "days": 4,
+      "reason": "not feeling well",
+      "status": "Approved",
+      "id": 2
+    }
+  ],
+  "attendence": [
+    {
+      "employeeId": "tmvc9Ug-sJI",
+      "name": "priyansh yadav",
+      "department": "it",
+      "checkInDate": "2026-04-13T17:49:40.699Z",
+      "checkIn": "23:19",
+      "checkOut": "23:20",
+      "hours": "0h 0m",
+      "id": "zAPFGXik54o"
+    },
+    {
+      "employeeId": "YROEyL5gtaQ",
+      "name": "nemesh sahu",
+      "department": "it",
+      "checkInDate": "2026-04-13T17:51:27.890Z",
+      "checkIn": "23:21",
+      "checkOut": "23:57",
+      "hours": "0h 36m",
+      "id": "Ae9zDBw74oc"
+    }
+  ]
+}

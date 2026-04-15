@@ -1,0 +1,191 @@
+#employee_menu{
+    background-color: black;
+    color: white;
+    border-radius:10px;
+}
+.employee-container{
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+    /* height: 80%; */
+    height: 90%;
+    width: 70%;
+    margin: 0 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.employee-container-txt{
+    /* background-color: rgba(128, 128, 128, 0.507); */
+    height: 20%;
+    width: 100%;
+    border-radius: 10px;
+}
+.employee-container-txt h3{
+    padding:2% 5%;
+    font-size: 1.9rem;
+}
+.employee-container-txt p{
+    padding: 0 5%;
+    border-radius: 10px;
+}
+.employee-container input{
+    /* background-color: red; */
+    margin: 1.5% 5%; 
+    font-size: 1.1rem;
+    padding: 0 20px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.219);
+    background-color: red;
+}
+#emp input{
+    /* background-color: red; */
+    height: 10%;
+    width: 90%;
+    font-size: 1.2rem;
+}
+/* employee table */
+.employee-data{
+   height: 50%;
+   width: 90%;
+   margin: 2% 5%;
+   border: 1px solid gray;
+}
+.employee-data table{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+.employee-data td{
+    border-right: 1px solid gray;
+    text-align: center;
+}
+.show_no_employee p{
+    margin: 1.5% 5%;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+/* test element  */
+/* .add_employee_container h1,
+.attendance_container h1,
+.leave_container h1,
+.payroll_container h1
+{
+    text-align: center;
+} */
+#add_emp,
+#atten,
+#leave,
+#pay{
+    display: none;
+}
+
+
+/* chatgpt  */
+.employee-container{
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+    height: 90%;
+    width: 70%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 30px;
+}
+
+.employee-container-txt{
+    width: 100%;
+    padding: 20px 30px 10px;
+}
+
+.employee-container-txt h3{
+    font-size: 1.9rem;
+    margin-bottom: 5px;
+}
+
+.employee-container-txt p{
+    color: gray;
+}
+
+#emp input{
+    width: calc(100% - 60px);
+    margin: 10px 30px 20px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    background-color: rgba(128,128,128,0.08);
+    outline: none;
+}
+
+/* TABLE CONTAINER */
+.employee-data{
+    flex: 1;
+    width: calc(100% - 60px);
+    margin: 0 30px 25px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/* TABLE */
+.employee-data table{
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* HEADER */
+.employee-data thead{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    z-index: 2;
+}
+
+.employee-data thead td{
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 1rem;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+/* BODY */
+.employee-data tbody td{
+    padding: 14px 10px;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    border-right: 1px solid rgba(0,0,0,0.08);
+    word-wrap: break-word;
+    background-color: white;
+}
+
+.employee-data tbody tr:hover td{
+    background-color: rgba(0,0,0,0.04);
+}
+
+/* remove last border */
+.employee-data td:last-child{
+    border-right: none;
+}
+
+/* optional action buttons */
+.employee-data button{
+    padding: 6px 12px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.employee-data .edit-btn{
+    background-color: black;
+    color: white;
+}
+
+.employee-data .delete-btn{
+    background-color: rgba(255,0,0,0.15);
+    color: red;
+}
